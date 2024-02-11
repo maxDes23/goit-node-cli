@@ -10,10 +10,10 @@ async function listContacts() {
 
 async function getContactById(contactId) {
   const contacts = await listContacts();
-  console.log(`nanoid()`, nanoid());
   const bookById = contacts.find((contact) => contact.id === contactId);
   return bookById || null;
 }
+
 
 async function removeContact(contactId) {
   const contacts = await listContacts();
